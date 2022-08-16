@@ -9,7 +9,7 @@ cv2.createTrackbar('filter', 'Filter', 0, 1, nothing)
 while True:
     _, frame = img.read()
     frame = cv2.flip(frame, 1)
-    count = cv2.getTrackbarPos('Zoom', 'Filter')
+    count = cv2.getTrackbarPos('filter', 'Filter')
     print("from loop",count)
     if(count==0):
         cv2.imshow('Filter', frame)
