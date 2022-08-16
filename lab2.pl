@@ -1,7 +1,29 @@
-my $x = "shahrudra876";
-if($x =~ /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/){
-    print "Valid Email\n";
+#check if email is valid
+use strict;
+use warnings;
+
+#USE OF SUBROUTINES
+sub is_valid_email {
+    my $email = shift;
+    #USE OF REGEX TO CHECK IF EMAIL IS VALID
+    if ($email =~ /^[\w\d]+\@[\w\d]+\.[\w\d]+$/) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
 }
-else{
-    print "Invalid Email\n";
+
+print "Enter email: ";
+my $email = <STDIN>;
+chomp $email;
+if (is_valid_email($email)) {
+    print "Valid email\n";
 }
+else {
+    print "Invalid email\n";
+}
+
+#use of hash
+my %l = {1 => "rudra", 2 => "good boy"};
+print(%l->{1});
