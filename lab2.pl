@@ -25,5 +25,5 @@ else {
 }
 
 #use of hash
-my %l = {1 => "rudra", 2 => "good boy"};
+my %l = {1 => "Rudra", 2 => "good boy"};
 print(%l->{1});
