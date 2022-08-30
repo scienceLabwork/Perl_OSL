@@ -25,5 +25,5 @@ else {
 }
 
 #use of hash
-my %l = {1 => "Rudra", 2 => "good boy"};
-print(%l->{1});
+my $l = {1 => "Rudra", 2 => "good boy"};
+print($l->{1});
